@@ -136,7 +136,6 @@ form.addEventListener('submit', (event)=>{
 
         }).map((el)=>{
              
-            console.log(el)
             return (
                 
                 res.innerHTML= `
