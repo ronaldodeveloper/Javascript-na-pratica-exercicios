@@ -1,7 +1,6 @@
 const form= document.querySelector('.form')
 let inputNome= document.querySelector('.nome')
 
-// John
 const stories_pt=[
     {
         title:`O velho da aldeia`,
@@ -119,7 +118,6 @@ const stories_us=[
         `
     },
 ]
-
 
 form.addEventListener('submit', (event)=>{ 
     event.preventDefault()
