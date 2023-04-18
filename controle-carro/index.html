@@ -23,6 +23,29 @@
             position: absolute;
             width: 80px;
         }
+        .table {
+            text-align: center;
+        }
+        .setas{
+            font-size: 18px;
+            font-weight: bold;
+            background-color: rgba(37, 36, 38, 0.921) !important;
+            border: 0;
+            color: rgb(100, 100, 100);
+            transition: color 0.3 ease;
+        }
+        .seta-top{
+            writing-mode: vertical-rl;
+        }
+        .seta-bottom{
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+        .active{
+            
+            color: rgb(30, 230, 4);
+        }
+
     </style>
 </head>
 <body>
@@ -32,6 +55,28 @@
             <a href="../index.html" class="btn btn-dark"><i class="fa-solid fa-arrow-left me-2"></i> voltar</a>
         </div>
         <section class="container">
+            <div>
+                <h3>Controles</h3>
+                <p class="mb-0">Use as setas para controlar a direção do  carro</p>
+                <table class="table mb-0">
+                    <thead>
+                        <tr>
+                            <th> Left </th>
+                            <th> Right </th>
+                            <th> Top </th>
+                            <th> Bottom </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="setas" data-dir="left">&#10094</td>
+                            <td class="setas" data-dir="right">&#10095</td>
+                            <td class="setas" data-dir="top"><span class="seta-top">&#10094</span></td>
+                            <td class="setas" data-dir="bottom"><span class="seta-bottom">&#10094</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
            <div class="box">
               <img class="car" src="../image/car.jpg" alt="">
            </div>

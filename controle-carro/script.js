@@ -1,5 +1,6 @@
 const log= console.log
 const car= document.querySelector('.car')
+const setas= document.querySelectorAll('.setas')
 
 let position= car.getBoundingClientRect()
 let positionTop= Math.floor(position.top)
@@ -11,8 +12,21 @@ let width= Math.floor(position.width)
 let height= Math.floor(position.height)
 
 
-log(car.offsetLeft)
+log(car.parentElement.clientLeft)
 var isEvent='';
+
+const controls= (dir)=>{
+
+  
+  return  Array.from(setas).filter((el)=>{
+                   let resetClass= el.classList.remove('active')
+                   return el.dataset.dir == `${dir}`
+              }).map((el)=>{ 
+                   return el.classList.add('active') 
+              })
+}
+
+// console.log()
 
 window.addEventListener('keydown',function(event){   
 
@@ -20,22 +34,24 @@ window.addEventListener('keydown',function(event){
 
    switch(isEvent){
     case 'ArrowUp':
+        controls('top')
         car.style.top = `${positionTop--}px`;
-        log('para cima')
-        break;
-    case 'ArrowDown':
-        car.style.bottom = `${positionBottom--}px`;
-        log('para baixo')
-        break;
-    case 'ArrowLeft':
-        car.style.left = `${positionLeft--}px`;
-            log('para esquerda')
-            break;
-    case 'ArrowRight':
-        car.style.right = `${positionRight--}px`;
-        log('para direita')
         break;
 
-    default: log(isEvent)
+    case 'ArrowDown':
+        controls('bottom')
+        car.style.bottom = `${positionBottom--}px`;
+        break;
+
+    case 'ArrowLeft':
+        controls('left')
+        car.style.left = `${positionLeft--}px`;
+            break;
+    case 'ArrowRight':
+        controls('right')
+        car.style.right = `${positionRight--}px`;
+        break;
+
+    default: isEvent
    }  
 })
