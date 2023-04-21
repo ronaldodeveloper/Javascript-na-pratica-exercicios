@@ -9,8 +9,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Javascript | Prático</title>
     <style>
-       
-    </style>
+       .list-group-item{
+            display: flex;
+            justify-content: space-between;
+       }
+       .list-group-item:hover{
+        color: #59635b;
+       }
+       .fa-circle-check{
+          color: #16d43c;
+          line-height: unset;
+          margin-right: 16px;
+       }
+       .fa-circle-exclamation{
+            color: rgba(255, 137, 41, 0.507);
+            line-height: unset;
+            margin-right: 16px;
+       }
+       [data-title]:hover:after {
+            opacity: 1;
+            transition: all 0.1s ease 0.3s;
+            visibility: visible;
+            padding: 5px 10px;
+            left: -90px;
+        }
+        [data-title]:after {
+            content: attr(data-title);
+            position: absolute;
+            bottom: -4px;
+            left: -30px;
+            background-color: #474747;
+            color: #fcfbfb;
+            font-family: sans-serif;
+            font-size: 12px;
+            font-weight: 100;
+            letter-spacing: 1px;
+            padding: 0;
+            border-radius: 3px;
+            white-space: nowrap;
+            box-shadow: 1px 1px 3px #38373717;
+            opacity: 0;
+            border: 1px solid #1111110c;
+            visibility: hidden;
+            z-index: 99999;
+        }
+        [data-title] {
+            position: relative;
+        }
+       </style>
 </head>
 <body>
 
@@ -19,19 +65,42 @@
             <h1>Javascript na Prática</h1>
             <h4>Lista de exercícios</h4>
         </header>
-        
 
         <div class="container">
             <div class="d-flex justify-content-between bg-dark p-3 text-white">
              <span class=""><strong>* exercícios</strong></span><span><strong>status</strong></span>
             </div>
             <div class="list-group list-group-flush">
-                <a href="./jogo-de-adivinhar-numero/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action text-decoration-none">Jogo de adivinhar o número</a>
-                <a href="./select-image/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action text-decoration-none">Opções de Imagens</a>
-                <a href="./gerador-de-historias-bobas/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action text-decoration-none">Gerador de Histórias Bobas</a>
-                <a href="./efeitos-mouse/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action text-decoration-none">Efeitos de Mouse</a>
-                <a href="./login/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action text-decoration-none">Login</a>
-                <a href="./controle-carro/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action text-decoration-none">Controle o Carro</a>
+                <a href="./jogo-de-adivinhar-numero/index.html" target="_blank" rel="noopener noreferrer"
+                    class="list-group-item list-group-item-action text-decoration-none">
+                    <span>Jogo de adivinhar o número</span>
+                    <i class="fa-solid fa-circle-check me-3" data-title="concluído"></i>
+                </a>
+                <a href="./select-image/index.html" target="_blank" rel="noopener noreferrer"
+                    class="list-group-item list-group-item-action text-decoration-none">
+                    <span>Opções de Imagens</span>
+                    <i class="fa-solid fa-circle-check me-3" data-title="concluído"></i>
+                </a>
+                <a href="./gerador-de-historias-bobas/index.html" target="_blank" rel="noopener noreferrer"
+                    class="list-group-item list-group-item-action text-decoration-none">
+                    <span>Gerador de Histórias </span>
+                    <i class="fa-solid fa-circle-check me-3" data-title="concluído"></i>
+                </a>
+                <a href="./efeitos-mouse/index.html" target="_blank" rel="noopener noreferrer"
+                    class="list-group-item list-group-item-action text-decoration-none">
+                    <span>Efeitos de Mouse</span>
+                    <i class="fa-solid fa-circle-check me-3" data-title="concluído"></i>
+                </a>
+                <a href="./login/index.html" target="_blank" rel="noopener noreferrer"
+                    class="list-group-item list-group-item-action text-decoration-none">
+                    <span>Login</span>
+                    <i class="fa-solid fa-circle-exclamation" data-title="pendente"></i>
+                </a>
+                <a href="./controle-carro/index.html" target="_blank" rel="noopener noreferrer"
+                    class="list-group-item list-group-item-action text-decoration-none">
+                    <span>Controle o Carro</span>
+                    <i class="fa-solid fa-circle-exclamation" data-title="pendente"></i>
+                </a>
 
             </div>
         </div>

@@ -1,0 +1,9 @@
+{
+    "workbench.colorCustomizations": {
+        "[Material Theme High Contrast]": {},
+        "tab.activeBackground": "#484448",
+        "tab.inactiveBackground": "#2e2d2d",
+        "tab.activeBorderTop": "#ea1c72",
+        "editorLineNumber.foreground": "#494949fb"
+    }
+}
